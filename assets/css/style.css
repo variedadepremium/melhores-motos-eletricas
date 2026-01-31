@@ -220,6 +220,11 @@ footer {
   #sessao-final {
     flex-direction: column;
   }
+
+  .buy-buttons {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 /* ÍCONES */
@@ -285,3 +290,4 @@ footer {
 footer {
   animation: fadeIn 1s ease-out;
 }
+
