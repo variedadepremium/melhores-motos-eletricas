@@ -1,0 +1,287 @@
+:root {
+  --bg-primary: #0b132b;
+  --bg-secondary: #121c3a;
+  --text-primary: #ffffff;
+  --text-secondary: #dcdcdc;
+  --text-tertiary: #cfcfcf;
+  --text-muted: #ccc;
+  --accent-blue: #5bc0eb;
+  --accent-purple: #9d4edd;
+  --accent-pink: #f72585;
+  --grad-main: linear-gradient(
+    90deg,
+    var(--accent-blue),
+    var(--accent-purple),
+    var(--accent-pink)
+  );
+  --grad-cta: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+  --grad-mercado: linear-gradient(90deg, #ffe600, #f7c600);
+  --grad-shopee: linear-gradient(90deg, #ff6a00, #ff3d00);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.hero {
+  padding: 40px 20px;
+  text-align: center;
+  background: radial-gradient(
+    circle at top,
+    var(--accent-blue),
+    var(--bg-primary)
+  );
+}
+
+.hero .logo {
+  height: 100px;
+  border-radius: 50px;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: var(--text-secondary);
+}
+
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+.section.dark {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+}
+
+.checklist li {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.card {
+  background: var(--bg-secondary);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+}
+
+.desc {
+  margin: 10px 0 20px;
+  color: var(--text-tertiary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 28px;
+  background: var(--grad-main);
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: scale(1.03);
+}
+
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--grad-cta);
+}
+
+footer {
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.product-card {
+  display: flex;
+  gap: 30px;
+  background: var(--bg-secondary);
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 40px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+}
+
+.product-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.product-content {
+  flex: 2;
+}
+
+.product-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.pros-cons ul {
+  margin-left: 18px;
+}
+
+.buy-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.buy-buttons .btn {
+  flex: 1;
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: 14px;
+  font-weight: bold;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* BOTÕES ESPECÍFICOS */
+.btn.mercado {
+  background: var(--grad-mercado);
+  color: #000;
+}
+
+.btn.shopee {
+  background: var(--grad-shopee);
+  color: var(--text-primary);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .product-card {
+    flex-direction: column;
+  }
+
+  .pros-cons {
+    grid-template-columns: 1fr;
+  }
+
+  #sessao-final {
+    flex-direction: column;
+  }
+}
+
+/* ÍCONES */
+.buy-buttons .btn img {
+  height: 22px;
+  width: auto;
+}
+
+.buy-option {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.buy-label {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--text-tertiary);
+}
+
+/* SEÇÃO FINAL */
+#sessao-final {
+  display: flex;
+  gap: 40px;
+}
+
+/* Reduz o espaçamento entre a intro e a lista de produtos */
+#produtos {
+  padding-top: 0;
+}
+
+/* Reduz o espaçamento entre a lista de produtos e a seção final */
+#produtos + .section {
+  padding-top: 0;
+}
+
+.bloco-esquerdo,
+.bloco-direito {
+  flex: 1;
+  background: var(--bg-secondary);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ANIMAÇÃO DE ENTRADA */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero,
+.section,
+.cta,
+footer {
+  animation: fadeIn 1s ease-out;
+}
