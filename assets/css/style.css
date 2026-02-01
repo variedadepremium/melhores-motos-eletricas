@@ -287,7 +287,56 @@ footer {
 .hero,
 .section,
 .cta,
-footer {
+footer,
+.faq-section {
   animation: fadeIn 1s ease-out;
 }
 
+/* FAQ SECTION */
+.faq-section details {
+  background: var(--bg-secondary);
+  margin-bottom: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.faq-section summary {
+  padding: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  list-style: none;
+  position: relative;
+  padding-right: 50px;
+}
+
+.faq-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-section summary::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--accent-blue);
+  font-weight: bold;
+}
+
+.faq-section details[open] summary::after {
+  content: "-";
+  color: var(--accent-pink);
+}
+
+.faq-section p {
+  padding: 0 20px 25px;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 5px;
+  padding-top: 15px;
+}
